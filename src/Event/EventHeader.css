@@ -1,0 +1,11 @@
+/* EventHeader.css */
+.event-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.event-header p {
+  font-size: 1.2rem;
+  color: #ddd;
+}

@@ -1,0 +1,39 @@
+.navbar {
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-list li:hover {
+    color: #00bcd4;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

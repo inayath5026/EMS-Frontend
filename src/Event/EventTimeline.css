@@ -1,0 +1,84 @@
+/* Timeline Container */
+.timeline-container {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Timeline Title */
+.timeline-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+/* Timeline Wrapper */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+/* Timeline Item */
+.timeline-item {
+    position: relative;
+    margin: 20px 0;
+    padding-left: 40px;
+    text-align: left;
+}
+
+/* Timeline Vertical Line */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #007bff;
+}
+
+/* Timeline Dot */
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background-color: #007bff;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #007bff;
+}
+
+/* Timeline Content */
+.timeline-content {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline Date */
+.timeline-date {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-item {
+        padding-left: 30px;
+    }
+
+    .timeline-item::before {
+        left: 10px;
+    }
+
+    .timeline-item::after {
+        left: 5px;
+    }
+}

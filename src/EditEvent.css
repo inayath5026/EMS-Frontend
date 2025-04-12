@@ -1,0 +1,126 @@
+/* General Styles */
+.create-event-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-event-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.form-group .react-quill {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+}
+
+.form-group input[type="file"] {
+  padding: 5px;
+}
+
+.form-group .react-quill {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+/* Button Styles */
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Image Preview Styles */
+.banner-preview {
+  display: block;
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Custom Sections, Sponsors, Timeline, FAQs Styles */
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 20px;
+}
+
+/* Add/Remove Button Styles */
+button[type="button"] {
+  padding: 5px 10px;
+  margin-right: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="button"]:hover {
+  background-color: #218838;
+}
+
+button[type="button"].remove-button {
+  background-color: #dc3545;
+}
+
+button[type="button"].remove-button:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-event-container {
+    padding: 15px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea,
+  .form-group .react-quill {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+}
