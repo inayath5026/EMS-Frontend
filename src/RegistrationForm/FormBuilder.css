@@ -1,0 +1,120 @@
+.form-builder-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-group textarea {
+    min-height: 80px;
+  }
+  
+  .questions-section {
+    margin-top: 20px;
+  }
+  
+  .question-item {
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border-left: 4px solid #4CAF50;
+  }
+  
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .new-question {
+    background: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px dashed #ccc;
+  }
+  
+  .options-section {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+  
+  .option-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: #fff;
+    margin-bottom: 5px;
+    border-radius: 3px;
+  }
+  
+  .add-option {
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-btn {
+    background: #4CAF50;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .delete-btn {
+    background: #f44336;
+    color: white;
+  }
+  
+  .delete-btn.small {
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  
+  .submit-btn {
+    background: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  

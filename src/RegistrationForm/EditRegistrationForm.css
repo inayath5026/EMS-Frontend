@@ -1,0 +1,92 @@
+/* Edit Form Specific Styles */
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-btn {
+    padding: 8px 15px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .toggle-btn.edit {
+    background: #4CAF50;
+  }
+  
+  .toggle-btn.preview {
+    background: #FF9800;
+  }
+  
+  .form-preview {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .preview-question {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .preview-question label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .preview-question input[type="text"],
+  .preview-question textarea,
+  .preview-question select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .checkbox-options {
+    margin-top: 10px;
+  }
+  
+  .checkbox-option {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-option input {
+    margin-right: 8px;
+  }
+  
+  .question-settings {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    align-items: center;
+  }
+  
+  .required-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .option-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+  
+  .option-item input {
+    flex-grow: 1;
+  }
+  

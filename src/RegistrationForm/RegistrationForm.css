@@ -1,0 +1,82 @@
+.registration-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-description {
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .form-question {
+    margin-bottom: 25px;
+  }
+  
+  .form-question label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .form-question input[type="text"],
+  .form-question textarea,
+  .form-question select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-question textarea {
+    min-height: 100px;
+  }
+  
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .required {
+    color: #e74c3c;
+    margin-left: 4px;
+  }
+  
+  .submit-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .submit-button:hover {
+    background-color: #2980b9;
+  }
+  
+  .loading, .error, .no-form, .success-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 18px;
+  }
+  
+  .error {
+    color: #e74c3c;
+  }
+  
+  .success-message {
+    color: #27ae60;
+  }
+  
