@@ -17,6 +17,8 @@ import EditRegistrationForm from "./RegistrationForm/EditRegistrationForm";
 import AuthSuccess from "./AuthSuccess";
 import Login from "./Login";
 import Verify from "./Verify";
+import Dashboard from "./Dashboard/Dashboard";
+import Booking from "./Booking";
 
 function App() {
   return (
@@ -36,9 +38,11 @@ function App() {
           <Route path="/edit-ticket/:ticketId" element={<ProtectedRoute><EditTicket /></ProtectedRoute>} />
           <Route path="/create-form/:eventId" element={<ProtectedRoute><FormBuilder /></ProtectedRoute>} />
           <Route path="/register/:eventId" element={<RegistrationForm />} />
-          <Route path="/events/:eventId/responses" element={<ProtectedRoute><EventResponses /></ProtectedRoute>} />
+          <Route path="/responses/:eventId" element={<ProtectedRoute><EventResponses /></ProtectedRoute>} />
           <Route path="/payments/:eventId" element={<ProtectedRoute><Payments /></ProtectedRoute>} />
           <Route path="/verify/:eventId" element={<ProtectedRoute><Verify /></ProtectedRoute>} />
+          <Route path="/dashboard/:eventId" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+          <Route path="/bookings" element={<ProtectedRoute><Booking /></ProtectedRoute>} />
           <Route path="/events/:eventId/edit-form/:formId" element={<ProtectedRoute><EditRegistrationForm /></ProtectedRoute>} />
         </Routes>
       </Router>

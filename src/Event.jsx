@@ -242,27 +242,9 @@ const Event = () => {
   return (
     <div className="event-container">
       {/* Hero Section */}
-      <div className="hero-section">
-        {event.bannerImage && (
-          <img src={event.bannerImage} alt="Event Banner" className="banner" />
-        )}
-        <div className="hero-content">
-          <EventHeader event={event} />
-          {isCreator && (
-            <div className="action-buttons">
-              <button
-                onClick={() => navigate("/edit/" + event._id)}
-                className="edit-button"
-              >
-                Edit Event
-              </button>
-              <button onClick={confirmDelete} className="delete-button">
-                Delete Event
-              </button>
-            </div>
-          )}
-        </div>
-      </div>
+ 
+      <EventHeader event={event} />
+      
 
       {/* Event Details */}
       <EventDetails event={event} />
@@ -278,7 +260,7 @@ const Event = () => {
       )}
 
       {/* Team Details */}
-      {event.maxTeams && (
+      {(event.type == 'hackathon') && (
         <div className="team-details">
           <h2>Team Details</h2>
           <p>Max Teams: {event.maxTeams}</p>
@@ -302,31 +284,8 @@ const Event = () => {
       {event.faqs && event.faqs.length > 0 && <Faqs faqs={event.faqs} />}
 
       {/* Contact */}
-      <EventContact queries={event.queries} />
+      <EventContact queries={event.queries} event={event}/>
 
-      {/* Delete Confirmation Pop-up */}
-      {showDeleteConfirmation && (
-        <div className="delete-confirmation-popup">
-          <div className="popup-content">
-            <h3>Are you sure you want to delete this event?</h3>
-            <p>This action cannot be undone.</p>
-            <div className="popup-buttons">
-              <button
-                onClick={() => handleDeleteConfirmation(true)}
-                className="confirm-button"
-              >
-                Yes, Delete
-              </button>
-              <button
-                onClick={() => handleDeleteConfirmation(false)}
-                className="cancel-button"
-              >
-                No, Cancel
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };

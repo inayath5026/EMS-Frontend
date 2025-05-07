@@ -668,19 +668,19 @@ const RegistrationForm = () => {
   }
 
   // Error state
-  if (error) {
-    return (
-      <div className="error-container">
-        <div className="error-card">
-          <h2>Error</h2>
-          <p>{error}</p>
-          <Link to={`/event/${eventId}`} className="btn btn-primary">
-            Back to Event
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <div className="error-container">
+  //       <div className="error-card">
+  //         <h2>Error</h2>
+  //         <p>{error}</p>
+  //         <Link to={`/event/${eventId}`} className="btn btn-primary">
+  //           Back to Event
+  //         </Link>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   // Tickets sold out state
   if (!ticketsAvailable) {
@@ -690,7 +690,7 @@ const RegistrationForm = () => {
           <h2>Registration Closed</h2>
           <p>All tickets for this event have been sold out.</p>
           <Link to={`/event/${eventId}`} className="btn btn-primary">
-            Back to Event
+            <button>Back to Event</button>
           </Link>
         </div>
       </div>
@@ -708,11 +708,8 @@ const RegistrationForm = () => {
             <p><strong>Submitted on:</strong> {formatDate(existingSubmission.createdAt)}</p>
           </div>
           <div className="button-group">
-            <Link to={`/events/${eventId}`} className="btn btn-primary">
-              View Event Details
-            </Link>
-            <Link to="/my-registrations" className="btn btn-secondary">
-              View My Registrations
+            <Link to={`/event/${eventId}`} className="btn btn-primary">
+              <button>View Event Details</button>
             </Link>
           </div>
         </div>
@@ -734,8 +731,8 @@ const RegistrationForm = () => {
             </div>
           )}
           
-          <Link to={`/events/${eventId}`} className="btn btn-primary">
-            View Event Details
+          <Link to={`/event/${eventId}`} className="btn btn-primary">
+            <button>View Event Details</button>
           </Link>
         </div>
       </div>
@@ -751,10 +748,10 @@ const RegistrationForm = () => {
           <p>Please complete your payment before filling out the registration form.</p>
           <div className="button-group">
             <Link to={`/tickets/${eventId}`} className="btn btn-primary">
-              Proceed to Payment
+              <button>Proceed to Payment</button>
             </Link>
             <Link to={`/event/${eventId}`} className="btn btn-secondary">
-              Back to Event
+              <button>Back to Event</button>
             </Link>
           </div>
         </div>
@@ -807,6 +804,9 @@ const RegistrationForm = () => {
           <div className="form-actions">
             <button type="submit" className="btn btn-submit">
               Submit Registration
+            </button>
+            <button>
+              <Link to={"/events/"+eventId+"/edit-form/"+form._id}>ReCreate Form</Link>
             </button>
           </div>
         </form>

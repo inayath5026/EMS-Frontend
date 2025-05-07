@@ -9,16 +9,6 @@ const EventDetails = ({ event }) => {
 
   return (
     <div className="event-details">
-      {/* Description */}
-      {hasValue(event.description) && (
-        <>
-          <h2>Description</h2>
-          <div
-            dangerouslySetInnerHTML={{ __html: event.description }} // Render HTML
-          />
-        </>
-      )}
-
       {/* Location */}
       {hasValue(event.location) && (
         <>
@@ -28,7 +18,7 @@ const EventDetails = ({ event }) => {
       )}
 
       {/* Prize Pool */}
-      {hasValue(event.prizePool) && (
+      {(event.type == 'hackathon') && (
         <>
           <h2>Prize Pool</h2>
           <p>₹{event.prizePool}</p>

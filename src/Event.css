@@ -1,6 +1,7 @@
 /* General Styles */
 .event-container {
-  padding: 20px;
+  padding: 20px 8vw;
+
   max-width: 1200px;
   margin: 0 auto;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -137,4 +138,12 @@
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+
+  .event-container{
+    padding: 2px 1px;
+  }
+
 }

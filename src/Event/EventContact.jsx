@@ -24,12 +24,26 @@
 import React from 'react';
 import './EventContact.css';
 
-const EventContact = ({ queries }) => {
+const EventContact = ({ event, queries }) => {
   const { phone, whatsappGroup } = queries || {};
   
   if (!phone && !whatsappGroup) return null;
   
   return (
+    <>
+
+    <div>
+      {/* Description */}
+      {(event.description != "") && (
+        <>
+          <h2>About The Event</h2>
+          <div
+            dangerouslySetInnerHTML={{ __html: event.description }} // Render HTML
+          />
+        </>
+      )} 
+    </div>
+    
     <div className="contact-container">
       <div className="container">
         <h2 className="section-title text-gradient">Contact Us</h2>
@@ -71,6 +85,8 @@ const EventContact = ({ queries }) => {
         </div>
       </div>
     </div>
+
+    </>
   );
 };
 

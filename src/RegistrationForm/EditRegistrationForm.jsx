@@ -22,7 +22,7 @@ const EditRegistrationForm = () => {
   useEffect(() => {
     const fetchFormData = async () => {
       try {
-        const response = await axios.get(`/api/forms/${formId}`);
+        const response = await axios.get(`http://localhost:8080/api/forms/${formId}`);
         setFormData(response.data);
       } catch (error) {
         console.error('Error fetching form data:', error);
@@ -335,7 +335,7 @@ const EditRegistrationForm = () => {
           )}
 
           <div className="new-question">
-            <h4>{currentQuestion.questionText ? 'Edit Question' : 'Add New Question'}</h4>
+            <h4>{currentQuestion.questionText ? 'Add Question' : 'Add New Question'}</h4>
             <div className="form-group">
               <label>Question Text: *</label>
               <input
@@ -439,7 +439,7 @@ const EditRegistrationForm = () => {
             className="submit-btn primary"
             disabled={!formData.questions || formData.questions.length === 0 || isSubmitting}
           >
-            {isSubmitting ? 'Saving...' : 'Save Changes'}
+            {isSubmitting ? 'Creating...' : 'Recreate Form'}
           </button>
         </div>
       </form>

@@ -379,7 +379,7 @@ const FormBuilder = () => {
               onClick={addQuestion}
               disabled={!currentQuestion.questionText.trim()}
             >
-              {currentQuestion.questionText ? 'Update Question' : 'Add Question to Form'}
+              {currentQuestion.questionText ? 'Add Question' : 'Add Question to Form'}
             </button>
           </div>
         </div>

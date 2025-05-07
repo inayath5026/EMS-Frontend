@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import './Verify.css'; 
 
@@ -8,6 +8,7 @@ const Verify = () => {
   const [payments, setPayments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
     const fetchPayments = async () => {
@@ -20,7 +21,16 @@ const Verify = () => {
         setLoading(false);
       }
     };
+    const fetchUser = async () => {
 
+      const userResponse = await fetch('http://localhost:8080/auth/current-user', {
+        credentials: 'include'
+      });
+      const userData = await userResponse.json();
+      setCurrentUser(userData.isAuthenticated ? userData.user.email : null);
+
+    }
+    fetchUser();
     fetchPayments();
   }, [eventId]);
 
@@ -47,8 +57,18 @@ const Verify = () => {
     }
   };
 
-  if (loading) return <div className="loading">Loading payments...</div>;
+  if (!currentUser) return <div className="loading">Loading payments...</div>;
   if (error) return <div className="error">Error: {error}</div>;
+
+  if(currentUser != import.meta.env.VITE_ADMIN){
+    return (
+      <div className="access-denied">
+        <h2>Access Denied</h2>
+        <p>You don't have permission to view this Page.</p>
+        <Link to="/" className="home-link">Return to Home</Link>
+      </div>
+    );
+  }
 
   return (
     <div className="verify-container">

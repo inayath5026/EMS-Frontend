@@ -1,0 +1,346 @@
+/* Base Styles */
+.booking-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  /* Loading State */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+  
+  .spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Error State */
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: center;
+  }
+  
+  .error-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .retry-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .retry-button:hover {
+    background-color: #357abd;
+  }
+  
+  /* Empty State */
+  .no-bookings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+  }
+  
+  .empty-state {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .ticket-icon {
+    width: 80px;
+    height: 80px;
+    fill: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .explore-events-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .explore-events-button:hover {
+    background-color: #357abd;
+  }
+  
+  /* Ticket Card Styles */
+  .tickets-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+  }
+  
+  .ticket-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .ticket-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .ticket-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+  }
+  
+  .event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-right: 15px;
+    min-width: 60px;
+  }
+  
+  .date-day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  .date-month {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .event-info {
+    flex: 1;
+  }
+  
+  .event-name {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  .event-time {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  .ticket-body {
+    padding: 20px;
+  }
+  
+  .ticket-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .ticket-details {
+    margin-top: 15px;
+  }
+  
+  .detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+  }
+  
+  .detail-row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .detail-label {
+    font-weight: 500;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .detail-value {
+    font-weight: 600;
+    color: #333;
+    text-align: right;
+  }
+  
+  .status-confirmed {
+    color: #2ecc71;
+  }
+  
+  .ticket-footer {
+    padding: 15px 20px;
+    background: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .barcode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .barcode-lines {
+    height: 40px;
+    width: 150px;
+    background: repeating-linear-gradient(90deg, #333, #333 2px, transparent 2px, transparent 5px);
+    margin-bottom: 5px;
+  }
+  
+  .barcode-number {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #666;
+  }
+  
+  .view-ticket-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .view-ticket-button:hover {
+    background-color: #357abd;
+  }
+  
+  .ticket-perforation {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(90deg, transparent, transparent 10px, #f9f9f9 10px, #f9f9f9 20px);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .tickets-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .ticket-card {
+      max-width: 100%;
+    }
+    
+    .ticket-header {
+      padding: 15px;
+    }
+    
+    .event-name {
+      font-size: 1.1rem;
+    }
+    
+    .ticket-image {
+      height: 150px;
+    }
+    
+    .ticket-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .view-ticket-button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .page-title {
+      font-size: 1.5rem;
+    }
+    
+    .event-date {
+      padding: 8px 12px;
+      min-width: 50px;
+    }
+    
+    .date-day {
+      font-size: 1.2rem;
+    }
+    
+    .date-month {
+      font-size: 0.8rem;
+    }
+    
+    .ticket-body {
+      padding: 15px;
+    }
+    
+    .ticket-image {
+      height: 120px;
+    }
+    
+    .detail-label, .detail-value {
+      font-size: 0.85rem;
+    }
+  }
